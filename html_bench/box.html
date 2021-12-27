@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charest="UTF-8">
+	<title>盒子模型</title>
+	<style type="text/css">
+
+		.box{
+			width:100px;
+			height:100px;
+			padding:20px;/*内填充*/
+			border:5px solid #f00;/*外边框*/
+			margin:20px;/*与块边距，竖向两元素间的margin不叠加取较大值，横向不叠加*/
+		}
+		
+		.boxDisplay{
+			width:100px;
+			height:100px;
+			padding:20px;/*内填充*/
+			border:5px solid #f00;/*外边框*/
+			margin:20px;/*与块边距，竖向两元素间的margin不叠加取较大值，横向不叠加*/
+			display:inline;/*块内元素转化为行内元素,none隐藏，block转化为块元素并显示，配合js*/
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box">box</div>
+	<div class="box">box</div>
+	<div class="boxDisplay">box,inline</div>
+</body>
+</html>
+

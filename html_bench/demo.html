@@ -1,0 +1,122 @@
+<!-- 注释 -->
+
+<!doctype html>    <!-- 本文档使用的协议 -->
+<html>
+  <head>
+    <meta charset="utf-8">	<!-- meta 元信息,单标签 -->
+    <base target="_self">	<!--base设置本页面超链接默认打开方式-->
+    <title>head 学习html</title>
+    
+    <style type="text/css">
+	.transparency{
+    		Background-color:rgba(0,255,0,0.7);	/*rgba的a为透明度*/
+    		Color:rgba(255,0,255,0.7);
+    	}
+	.relative{
+		width:60px;
+		height:60px;
+		display:block; 
+		position:relative;
+		top:-50px
+	}
+	.radius{		/*圆角矩形*/
+		display:block;
+		width:60px;
+		height:100px;
+		background-color:#0f0;
+		border-radius:10px 20px 30px 40px;	/*弧度依次为左上 右上 右下 左下*/
+	}
+	.radius_circle{		/*圆角矩形*/
+		display:block;
+		width:100px;
+		height:100px;
+		background-color:#0f0;
+		border-radius:50%;	/*长宽相等50%为圆形*/
+	}
+    </style>
+  </head>
+  <body>
+  	body
+	<h1>h1标签</h1>	<!-- h1~h6标题标签 -->
+	<h6 id="锚点1">h6标签</h6>	<!--锚点 id-->
+	
+	<p>第一段******************<br />********
+	</p>			<!-- p 段落标签 -->
+	<p>第二段</p>		
+	
+	<hr />			<!--水平线单标签-->
+	<br />			<!--换行单标签-->
+	
+	<div>div标签</div>	<!--div和span是无语意布局标签-->
+	<span>span标签</span>
+	
+	<br /><b>b加粗</b>
+	<br /><strong>strong加粗,xhtml推荐使用</strong>
+	
+	<br /><i>斜体</i>
+	<br /><em>斜体</em>
+	
+	<br /><s>删除线</s>
+	<br /><del>删除线</del>
+
+	<br /><u>下划线</u>
+	<br /><ins>下划线</ins>
+	
+	<hr width="500" color="red"/>	<!--长度为500的红色水平线-->
+	<br /><img src="icon32.png"/>		<!--图片-->
+	<br /><img src="icon_unkown.png"/>	<!--不存在的图片-->
+	<br /><img src="icon_unkown.png" alt="图片不存在"/>	<!--不存在的图片，alt替换-->
+	<br /><img src="icon32.png" title="鼠标悬停"/>	<!--图片鼠标悬停显示title-->
+	<br /><img src="icon32.png" width=100 />		<!--图片长宽给一个会等比例缩放-->
+	<br /><img src="icon32.png" width=300 height=100 />
+	<br /><img src="icon32.png" border=10 />		<!--图片-->
+	
+	<hr />
+	<a href="http://www.baidu.com">百度链接</a>		<!--a标签超链接-->
+	<br /><a href="http://www.baidu.com" target="_blank">百度链接——新页面</a>		<!--a标签-->
+	<br /><a href="icon32.png">icon32</a>
+	<br /><a href="#锚点1">去锚点1</a>			<!--a标签锚点 #表页面内-->
+	
+	<hr />
+	特殊字符：
+	<br />&nbsp空格
+	<br />&lt小于号
+	
+	<hr /><h3>无序列表</h3>
+	<ul>				<!--无序列表-->
+		<li>列表项一</li>
+		<li>列表项二*************</li>
+		<li>列表项三			
+			<p>paragraph1</p>
+			<p>paragraph2</p>
+		</li>
+		<li>列表项四</li>
+	</ul>
+	
+	<br /><h3>有序列表</h3>
+	<ol>				<!--有序列表，自动带有顺序标签-->
+		<li>第一名</li>
+		<li>第二名</li>
+		<li>第三名</li>
+		<li>第四名</li>
+	</ol>
+	
+	<br />
+	<h3>自定义列表</h3>
+	<dl>				<!--自定义列表-->
+		<dt>浙江</dt>
+		<dd>嘉兴</dd>		<!--dd围绕dt-->
+		<dd>杭州</dd>
+		
+		<dt>江苏</dt>
+		<dd>苏州</dd>		
+		<dd>南京</dd>
+	<dl/>
+	
+	<img src="icon32.png" width=100 />
+	<div class="transparency relative">透明度aaaaaaaaaaaaaaaaaaaaaaa</div>
+	
+	<div class=radius>圆角矩形</div>
+	<div class=radius_circle>圆形</div>
+  </body>
+</html>

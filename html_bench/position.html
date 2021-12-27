@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charest="UTF-8">
+	<title>定位</title>
+	<style type="text/css">
+
+	.aFixed{
+		width:60px;
+		height:60px;
+		display:block;
+		background-color:#ccc;
+		text-align:centre;
+		line-height:30px;
+		text-decoration:none;
+		color:white;
+		font-weight:bold;
+		/*使用固定定位，距右边30px距下方100px*/
+		position:fixed;
+		right:30px;
+		bottom:100px;
+	}
+	
+	.relative{
+		width:60px;
+		height:60px;
+		display:block; /*转化为块才能不受标准文档流限制*/
+		background-color:#333;
+		text-align:centre;
+		line-height:30px;
+		text-decoration:none;
+		color:white;
+		font-weight:bold;
+		/*相对定位，会在老家留下一个坑并覆盖标准文档流
+		常配合绝对定位使用*/
+		position:relative;
+		left:100px;
+	}
+	/*相对于有定位坐标的最近父级元素定位*/
+	.absolute{
+		background-color:#0f0;
+		position:absolute;
+		left:200px;
+		top:200px;
+		z-index:1;/*z-index默认为0，大值压盖小值*/
+	}
+	
+	.longbox{
+		height:2000px;
+		background-color:#ccc;
+	}
+	</style>
+</head>
+<body>
+	<aFixed href="#">固定定位<br/>返回<br/>顶部</aFixed>
+	<img src="./icon32.png" alt="">
+	<div class=relative>相对定位</div>
+	<div class=longbox>
+		111
+		<div class=absolute>
+		绝对定位，上级longbox未设置定位，根据上上级浏览器最左上角定位
+		</div>
+	</div>
+	<img src="./icon32.png" alt="">
+</body>
+</html>
+

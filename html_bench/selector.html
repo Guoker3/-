@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charest="UTF-8">
+	<title>CSS选择器</title>
+	<style type="text/css">
+		h4{
+			color:#00f;	/*标签选择器，权重1*/
+		}
+		.h{
+			color:#0ff;	/*类选择器，权重10*/
+		}
+		#hh{
+			color:#f0f;  	/*id选择器，权重100*/
+		}
+		
+		.box{
+			width:100px;
+			background-color:#f00;
+		}
+		.box2{
+			height:100px;
+			background-color:#f00;
+		}
+		span{
+			width: 100px;
+			height:100px;
+			background-color:#f00;
+		}
+		
+		/*伪类选择器给超链接设置不同的状态
+		 状态排序按照LoVeHAte*/
+		a:link{
+			color:#f00;
+		}
+		a:visited{
+			color:#0f0;
+		}
+		a:hover{
+			color:gold;
+		}
+		a:active{
+			color:blue;
+		}
+		
+		/*属性选择器*/
+		[size="8"]{
+			color:#0f0 !important;/*!important表最高权重，内联选择器权重1000*/
+		}
+		[align]{
+			color:#00f;
+		}
+		
+		/*CSS3中的结构伪类选择器*/
+		.ss ul li:first-child{		/*匹配特定的孩子*/
+			color:#f00;
+		}
+		/*伪元素*/
+		.ss ul li::after{		/*末尾添加元素*/
+			content:"...";
+		}
+
+	</style>
+</head>
+<body>
+	<font color="#f00"><h2>通用选择器</h2></font>
+	<h4>标签选择器</h4>
+	<h3 class="h">类选择器</h3>
+	<h6 id="hh">id选择器1</h6>
+	<h6 id="hh">id选择器2</h6>
+	<div class="box">div</div>
+	<div class="box box2 ">一个标签多个类名</div>
+	<hr/>
+	<span>span</span>
+	<hr />
+	<a href="https://www.baidu.com">百度链接</a>
+	
+	<hr />
+	<p><font size=8>属性选择器，size=8</font></p>
+	<h2 align="centre">属性选择器,align</h2>
+	<h2>属性选择器，无align</h2>
+	
+	<div class="ss">
+		<ul>
+			<li>伪类结构选择器1</li>
+			<li>伪类结构选择器2</li>
+			<li>伪类结构选择器3</li>
+		</ul>
+	</div>
+</body>
+</html>
+
